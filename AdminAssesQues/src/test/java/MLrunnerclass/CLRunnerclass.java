@@ -10,5 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features = "FeatureFiles/companylogin.feature", glue = "MLStepDefinition", dryRun = false, monochrome = true)
 
 public class CLRunnerclass {
+	
+	// it should combine the feature file and the step definition
+	// define runner
 
 }

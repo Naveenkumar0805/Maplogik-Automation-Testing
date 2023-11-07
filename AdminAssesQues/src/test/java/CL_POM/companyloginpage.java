@@ -25,8 +25,6 @@ public class companyloginpage extends CLBaseclass {
 		
 		WebElement OTP = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
 		String text = OTP.getText();
-		//int x=Integer.parseInt(text.split(" ")[5]);
-		//String OTPnumber=Integer.toString(x); 
 		
 		// Extract numbers from the text
         StringBuilder extractedNumbers = new StringBuilder();
