@@ -29,13 +29,25 @@ public class CLapproveinternship extends CLBaseclass {
 		initializeWait();
 		
 		WebElement Highlyskilled = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='6']")));
-		//Highlyskilled.click();
-		
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", Highlyskilled);
 		
-		//WebElement Eightypluspercent = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='1']"));
-		//Eightypluspercent.click();
+		WebElement Eightypluspercent = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='1']"));
+		Eightypluspercent.click();
+		
+		WebElement seventy_to_eightypercent = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='2']"));
+		seventy_to_eightypercent.click();
+		
+		WebElement sixty_to_seventy = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='3']"));
+		sixty_to_seventy.click();
+		
+		WebElement forty_to_sixty = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='4']"));
+		forty_to_sixty.click();
+		
+		WebElement backlog = driver.findElement(By.xpath("//button[@class='btn bg-primary text-white font-weight-bold percentage-filter1 mr-2' and @data-id='5']"));
+		backlog.click();
+		
+		
 		
 	}
 
