@@ -66,7 +66,6 @@ public class internshippage extends CLBaseclass {
 
 		int rowIndex = 4;
 
-		//	for (int rowIndex = 1; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
 		XSSFRow row = sheet.getRow(rowIndex);
 
 		if (row != null) {
@@ -93,6 +92,10 @@ public class internshippage extends CLBaseclass {
 
 		WebElement stipend = driver.findElement(By.id("salary"));
 		stipend.sendKeys("15,000"+Keys.ENTER);
+		
+		initializeWait();		
+		WebElement posted = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@type='button'])[3]")));
+		posted.click();
 
 	}
 

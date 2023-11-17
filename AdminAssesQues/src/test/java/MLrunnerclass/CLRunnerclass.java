@@ -7,7 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "FeatureFiles/companylogin.feature", glue = "MLStepDefinition", dryRun = false, monochrome = true)
+@CucumberOptions(features = "FeatureFiles/companylogin.feature", glue = "MLStepDefinition", dryRun = false, monochrome = true )
+					//tags = "@ApproveInternshipTag" )
 
 public class CLRunnerclass {
 	

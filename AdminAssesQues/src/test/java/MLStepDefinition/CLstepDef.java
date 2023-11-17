@@ -2,6 +2,7 @@ package MLStepDefinition;
 
 import java.io.IOException;
 
+import CL_POM.CLAvailabilityOfInterns;
 import CL_POM.CLBaseclass;
 import CL_POM.companyloginpage;
 import CL_POM.internshippage;
@@ -13,6 +14,7 @@ public class CLstepDef extends CLBaseclass {
 	
 	companyloginpage companylogin = new companyloginpage();
 	internshippage internpage = new internshippage();
+	CLAvailabilityOfInterns internsummary = new CLAvailabilityOfInterns();
 	
 	@Given("The user is on the company login page")
 	public void the_user_is_on_the_company_login_page() {
@@ -47,6 +49,21 @@ public class CLstepDef extends CLBaseclass {
 		internpage.internshipdetails();
 		internpage.titleanddescription();
 		internpage.internduration();
+		
+	}
+	
+	@When("The user selects the course and program")
+	public void the_user_selects_the_course_and_program() {
+		
+		internsummary.availability();
+		System.out.println("Posted internship");
+	}
+
+	@When("selects the department to check the availability of interns")
+	public void selects_the_department_to_check_the_availability_of_interns() {
+
+		System.out.println("Repeated internship");
+		
 	}
 
 
