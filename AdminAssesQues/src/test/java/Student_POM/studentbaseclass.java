@@ -13,9 +13,11 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -73,5 +75,11 @@ public class studentbaseclass {
 		 ImageIO.write(source, "PNG", destinationfile);
 		
 	}
+	
+	public static void clickWithJavaScript(WebDriver driver, WebElement element) {
+	      JavascriptExecutor executor = (JavascriptExecutor) driver;
+	        executor.executeScript("arguments[0].click();", element);
+	    }
+
 
 }
