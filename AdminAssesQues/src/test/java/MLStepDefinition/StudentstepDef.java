@@ -27,7 +27,7 @@ public class StudentstepDef extends studentbaseclass {
 	@When("the student enters the username and password")
 	public void the_student_enters_the_username_and_password() {
 		
-		studentlogin.entercredentials("CJF_1", "Test@123");
+		studentlogin.entercredentials("RV_1006", "Test@123");
 		studentlogin.clicklogin();
 	}
 

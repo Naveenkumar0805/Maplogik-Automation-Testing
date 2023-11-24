@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 
@@ -43,6 +44,11 @@ public class CLBaseclass {
 
 	public static void initializeWait() {
 		wait = new WebDriverWait(driver, 10); // Initialize the wait object with a timeout of 10 seconds.
+	}
+	
+	public static void implicitwait() {
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
 	
